@@ -8,24 +8,23 @@ import { AccountService } from '../_services/account.service';
 })
 export class NavComponent implements OnInit {
   user: any = {};
-  loggedIn = false;
 
-  constructor(private accountService: AccountService) { }
+  constructor(public accountService: AccountService) { }
 
   ngOnInit(): void {
+
   }
 
   login(): void {
     this.accountService.login(this.user).subscribe({
       next: response => {
         console.log(response);
-        this.loggedIn = true;
       },
       error: error => console.log(error)
     });
   }
 
   logout() {
-    this.loggedIn = false;
+    this.accountService.logout();
   }
 }
