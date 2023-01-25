@@ -28,6 +28,7 @@ import { TextInputComponent } from './_forms/text-input/text-input.component';
 import { DatePickerComponent } from './_forms/date-picker/date-picker.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { TimeagoModule } from 'ngx-timeago';
+import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
 
 @NgModule({
   imports: [
@@ -47,7 +48,7 @@ import { TimeagoModule } from 'ngx-timeago';
     {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
   ],
-  declarations: [AppComponent, NavComponent, HomeComponent, RegisterComponent, MemberListComponent, MemberDetailComponent, ListsComponent, MessagesComponent, TestErrorComponent, NotFoundComponent, ServerErrorComponent, MemberCardComponent, MemberEditComponent, PhotoEditorComponent, TextInputComponent, DatePickerComponent],
+  declarations: [AppComponent, NavComponent, HomeComponent, RegisterComponent, MemberListComponent, MemberDetailComponent, ListsComponent, MessagesComponent, TestErrorComponent, NotFoundComponent, ServerErrorComponent, MemberCardComponent, MemberEditComponent, PhotoEditorComponent, TextInputComponent, DatePickerComponent, MemberMessagesComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
