@@ -29,6 +29,11 @@ import { DatePickerComponent } from './_forms/date-picker/date-picker.component'
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { TimeagoModule } from 'ngx-timeago';
 import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
+import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component';
+import { HasRoleDirective } from './_directives/has-role.directive';
+import { UserManagementComponent } from './admin/user-management/user-management.component';
+import { PhotosManagementComponent } from './admin/photos-management/photos-management.component';
+import { RolesModalComponent } from './modals/roles-modal/roles-modal.component';
 
 @NgModule({
   imports: [
@@ -48,7 +53,7 @@ import { MemberMessagesComponent } from './members/member-messages/member-messag
     {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
   ],
-  declarations: [AppComponent, NavComponent, HomeComponent, RegisterComponent, MemberListComponent, MemberDetailComponent, ListsComponent, MessagesComponent, TestErrorComponent, NotFoundComponent, ServerErrorComponent, MemberCardComponent, MemberEditComponent, PhotoEditorComponent, TextInputComponent, DatePickerComponent, MemberMessagesComponent],
+  declarations: [AppComponent, NavComponent, HomeComponent, RegisterComponent, MemberListComponent, MemberDetailComponent, ListsComponent, MessagesComponent, TestErrorComponent, NotFoundComponent, ServerErrorComponent, MemberCardComponent, MemberEditComponent, PhotoEditorComponent, TextInputComponent, DatePickerComponent, MemberMessagesComponent, AdminPanelComponent, HasRoleDirective, UserManagementComponent, PhotosManagementComponent, RolesModalComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
