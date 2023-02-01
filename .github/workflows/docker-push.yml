@@ -2,9 +2,9 @@ name: docker-push
 
 on:
   workflow_dispath:
-  # push:
-  #   branches:
-  #     - 'main'
+  push:
+    branches:
+      - 'main'
 
 jobs:
   docker:
